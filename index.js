@@ -3,6 +3,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 var todoRoutes = require('./routes/todos');
+var surveyRoutes = require('./routes/survey');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -14,6 +15,7 @@ app.get('/', function(req, res){
 });
 
 app.use('/api/todos', todoRoutes);
+app.use('/api/survey', surveyRoutes);
 
 app.listen(process.env.PORT, function(){
    console.log('App is running on port '+ process.env.PORT); 
