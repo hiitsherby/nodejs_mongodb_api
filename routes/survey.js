@@ -8,7 +8,7 @@ router.route('/')
     .get(helpers.getSurveys)
     .post(helpers.createSurvey)
 
-router.route('/:SurveyId')
+router.route('/:surveyId')
     .get(helpers.getSurvey)
     .put(helpers.updateSurvey)
     .delete(helpers.deleteSurvey)
