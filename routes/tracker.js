@@ -5,12 +5,12 @@ var helpers = require('../helpers/tracker');
 
 
 router.route('/')
-    .get(helpers.getTodos)
-    .post(helpers.createTodo)
+    .get(helpers.getTrackers)
+    .post(helpers.createTracker)
 
-router.route('/:todoId')
-    .get(helpers.getTodo)
-    .put(helpers.updateTodo)
-    .delete(helpers.deleteTodo)
+router.route('/:trackerId')
+    .get(helpers.getTracker)
+    .put(helpers.updateTracker)
+    .delete(helpers.deleteTracker)
 
 module.exports = router;
